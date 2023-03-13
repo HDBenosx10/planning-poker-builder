@@ -1,0 +1,14 @@
+{
+  "name": "planning-poker-builder",
+  "version": "0.1.0",
+  "description": "Build planning poker scrapping Jira",
+  "main": "index.js",
+  "author": "hdbenosx10",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "node-fetch": "^3.3.0",
+    "puppeteer": "^19.7.4"
+  }
+}
