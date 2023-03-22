@@ -14,5 +14,5 @@ export const getIssues = async () => {
   const response = await request.json()
   const issuesIds = response.sprints.find(({name}) => name === SPRINT)?.issuesIds
   if(!issuesIds) throw new Error(`Sprint name is wrong ${SPRINT}`)
-  return response.issues.filter(issue => issuesIds.includes(issue.id)).map(issue => issue.key)
+  return response.issues.filter(issue => issuesIds.includes(issue.id) && !issue.estimateStatistic?.statFieldValue?.value)?.map(issue => issue.key)
 }
